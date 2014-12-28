@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -m 0700 /root/.ssh
+curl -fs http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key/ > /root/.ssh/authorized_keys
+chmod 0600 /root/.ssh/authorized_keys
